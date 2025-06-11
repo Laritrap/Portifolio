@@ -111,7 +111,9 @@ main {
     gap: 50px;
     flex-wrap: wrap;
 }
-
+.vid{
+  padding: 90px;
+}
 .esp {
     gap: 5px;
 }
@@ -119,7 +121,7 @@ main {
 .ativi1{
   width: 500px;
   height: 250px;
-  background-color: #AFDDFF;
+  background-color: #90D1CA;
 }
 
 .disciplina {
