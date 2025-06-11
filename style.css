@@ -112,6 +112,10 @@ main {
     flex-wrap: wrap;
 }
 
+.esp iframe{
+    gap: 5px;
+}
+
 .disciplina {
     display: flex;
     justify-content: center;
