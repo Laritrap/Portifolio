@@ -4,30 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Portifolio</title>
+    <title>Fisica - Portifolio</title>
+    <style>
+        .ativi {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 60px; /* Espaço para o menu hambúrguer */
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            justify-items: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 300px;
+            height: 180px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .card-front {
+            background-color: #90D1CA;
+        }
+
+        .card-back {
+            background-color: #48A6A7;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .resumo {
+            background-color: #e5f9f5;
+            padding: 20px;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .hamburger-menu {
+            z-index: 10;
+            position: relative;
+        }
+
+        .menu__btn {
+            z-index: 11;
+        }
+
+        .menu__box {
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- section.c1>div*3.c2>h2+p -->
         <div class="cabe">
             <h1>Portifolio</h1>
         </div>
     </header>
-    <div class="hamburger-menu">
-    <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" for="menu__toggle">
-      <span></span>
-    </label>
 
-    <ul class="menu__box">
-      <li><a class="menu__item" href="./index.html">Home</a></li>
-      <li><a class="menu__item" href="./physics.html">Fisica</a></li>
-      <li><a class="menu__item" href="./chemestry.html">Quimica</a></li>
-      <li><a class="menu__item" href="./bio.html">Biologia</a></li>
-      <li><a class="menu__item" href="">Contato</a></li>
-    </ul>
-  </div>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+
+        <ul class="menu__box">
+            <li><a class="menu__item" href="./index.html">Home</a></li>
+            <li><a class="menu__item" href="./physics.html">Fisica</a></li>
+            <li><a class="menu__item" href="./chemestry.html">Quimica</a></li>
+            <li><a class="menu__item" href="./bio.html">Biologia</a></li>
+            <li><a class="menu__item" href="#">Contato</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="ativi">
+            <h2>Fisica - Perguntas e Respostas</h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p><strong>Pergunta:</strong><br>Qual a diferença entre massa e peso?</p>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>Resposta:</strong><br>Massa mede a quantidade de matéria de um corpo,<br>peso mostra a relação da massa com a aceleração da gravidade local.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p><strong>Pergunta:</strong><br>O que é matéria escura e por que é difícil de detectar?</p>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>Resposta:</strong><br>A matéria escura é uma forma de matéria que não emite, absorve nem reflete luz. Sua existência foi<br>inferida através dos efeitos gravitacionais que exerce sobre a matéria visível.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p><strong>Pergunta:</strong><br>O que causa a refração da luz?</p>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>Resposta:</strong><br>A refração da luz é um fenômeno óptico que ocorre quando a luz muda de meio de propagação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <p><strong>Pergunta:</strong><br>O que é um campo magnético e como ele é gerado?</p>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>Resposta:</strong><br>Um campo magnético é uma região do espaço onde partículas carregadas sofrem forças magnéticas. Ele é gerado pelo movimento de cargas elétricas ou por materiais com propriedades magnéticas intrínsecas, como ímãs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resumo">
+                <h3>Resumo de Fisica</h3>
+                <p>O eletromagnetismo estuda as relações entre eletricidade e magnetismo, incluindo cargas elétricas, campos elétricos e magnéticos, correntes elétricas e indução eletromagnética.</p>
+            </div>
+        </section>
+    </main>
+
     <footer class="foo">
+        <p>Portifolio 2025 - Fisica &copy;</p>
     </footer>
-    </body>
+</body>
 </html>
