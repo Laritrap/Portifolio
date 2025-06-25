@@ -116,10 +116,23 @@ main {
     gap: 5px;
 }
 
+.ativi{
+  display: flex;
+}
+
 .ativi1{
   width: 500px;
   height: 250px;
   background-color: #90D1CA;
+  align-items: center;
+  font-size: 18px;
+}
+.ativi2{
+  width: 500px;
+  height: 250px;
+  background-color: #90D1CA;
+  align-items: center;
+  font-size: 18px;
 }
 
 .disciplina {
