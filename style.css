@@ -158,6 +158,10 @@ main {
     text-decoration: none;
 }
 
+.ativid{
+  display: flex;
+  flex-direction: column;
+}
 footer{
     background-color: #48A6A7;
     width: auto;
